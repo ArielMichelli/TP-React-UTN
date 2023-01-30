@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Producto({ title, price, category, thumbnail, comprar }) {
+function Producto({ title, price, category, thumbnail, comprar, detalles }) {
     return (
         <div className="product__card">
             <h2>{title}</h2>
@@ -10,7 +10,10 @@ function Producto({ title, price, category, thumbnail, comprar }) {
             <div className="card__img">
                 <img src={thumbnail} alt="Imagen de producto..." />
             </div>
-            <button onClick={comprar} className='card__btn'>Comprar</button>
+            <div className="button__container">
+                <button onClick={comprar} className='card__btn'>Comprar</button>
+                <button onClick={detalles} className='card__btn'>Detalles</button>
+            </div>
         </div>
     )
 }

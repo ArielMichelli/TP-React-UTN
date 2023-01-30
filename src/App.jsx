@@ -1,7 +1,5 @@
 
 import Productos from './Services/Productos'
-import Footer from './layout/Footer'
-import Header from './layout/Header'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
@@ -11,7 +9,6 @@ import {
   Route,
   Routes,
   Link
-
 } from 'react-router-dom';
 
 
@@ -23,21 +20,23 @@ function App() {
       <Router>
 
         <nav className="navbar">
-          <Link to="/">Home</Link>
-          <Link to="/productos">Productos</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/registro">Registro</Link>
+          <div className="navbar__der">
+            <Link to="/">Home</Link>
+            <Link to="/productos">Productos</Link>
+          </div>
+          <div className="navbar__izq">
+            <Link to="/login">Login</Link>
+            <Link to="/registro">Registro</Link>
+          </div>
 
         </nav>
 
         <Routes>
-        <Route path="/" element = {  <Home/>}   />
-        <Route path="/home" element={<h1>pagina de home</h1>} />
-        <Route path="/productos" element={ <Productos/>} />
-        <Route path="/login" element={  <Login/>} />
-        <Route path="/registro" element={  <Registro/>} />
-      
-
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<h1>pagina de home</h1>} />
+          <Route path="/productos" element={<Productos />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
         </Routes >
 
       </Router >

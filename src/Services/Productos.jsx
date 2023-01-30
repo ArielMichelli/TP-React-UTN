@@ -9,22 +9,25 @@ const Productos = () => {
             fetch("https://api.mercadolibre.com/sites/MLA/search?q=ipod")
                 .then(res => res.json())
                 .then(data => setProductos(data?.results))
-            
         }, [])
 
-        const handleComprar = (e) => {
-            console.log("Producto vendido")
-            console.dir(e.target)
-            e.target.classList.add("vendido")
-            e.target.innerHTML = 'Producto Vendido'
-          };
-        
+    const handleComprar = (e) => {
+        console.log("Producto vendido")
+        console.dir(e.target)
+        e.target.classList.add("vendido")
+        e.target.innerHTML = 'Producto Vendido'
+    };
+
+    const handleDetalles = (e) => {
+        console.log(`Esta viendo los detalles de un producto`)
+
+    };
 
     return (
         <div className="product__container">
-            
+
             {productos.map((prod) => (
-                
+
                 <Producto
                     key={prod.id}
                     title={prod.title}
@@ -32,8 +35,9 @@ const Productos = () => {
                     category={prod.category}
                     thumbnail={prod.thumbnail}
                     comprar={handleComprar}
+                    detalles={handleDetalles}
                 />
-               
+
             ))}
 
         </div>

@@ -1,7 +1,11 @@
+/*Fuente de texto:*/
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     list-style: none;
+    font-family: 'Acme', sans-serif;
 }
 
 a {
@@ -9,6 +13,7 @@ a {
 }
 
 .product__container {
+    margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -21,19 +26,46 @@ a {
     margin: 20px auto;
 }
 
+/*  ===== NAVBAR DECORACION: =====*/
+.navbar {
+    display: flex;
+    margin: 20px 10px;
+    justify-content: space-between;
+    border-radius: 40px;
+    padding: 15px;
+    background-color: #3282B5;
+    box-shadow: 2px 5px 10px black;
+    font-size: 1.4rem;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar__izq,
+.navbar__der {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.navbar li {
+    font-size: 1.3rem;
+}
+
+/* ===== PRODUCTOS ===== */
 .product__card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    background-color: rgba(200, 200, 80, 0.5);
+    background-color: #3282B5;
     width: 250px;
-
     border-radius: 20px 50px;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 3px 1px 3px black;
     transition: .5s;
+    color: white;
 }
 
 .product__card:hover {
@@ -65,33 +97,30 @@ a {
     background-color: rgba(255, 0, 0, 0.7);
 }
 
-.oscurito {
-    background-color: black;
-    height: 100vh;
+.home {
+    background-color: #BBE2F2;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+
     font-size: 2.5rem;
     gap: 35px;
 }
 
-.oscurito img {
-    width: 350px;
+.home img {
+    width: 400px;
     height: 350px;
 }
 
-/* *{
-    border: solid red 1px;
-} */
-/* Decoracion FORMULARIOS:*/
+/* ===== FORMULARIOS Decoracion ===== */
 .contenedor__form {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #0E4C75;
-    height: 150vh;
+    height: 100vh;
 }
 
 form {
@@ -122,6 +151,7 @@ form button {
     border: none;
     background-color: #BBE2F2;
     font-size: 1.3rem;
+    margin-top: 10px;
 
 }
 
@@ -136,6 +166,7 @@ form button:hover {
 }
 
 .text__form {
+    margin-top: 10px;
     font-size: 1.1rem;
     text-align: center;
     color: white;
@@ -146,4 +177,24 @@ form button:hover {
     color: white;
     font-size: 1.2rem;
     text-decoration: underline;
+}
+
+.row__form {
+    display: flex;
+    width: 100%;
+}
+
+#formRegistro {
+    width: fit-content;
+    height: auto;
+    background-color: #3282B5;
+}
+
+#formRegistro label {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#formRegistro input {
+    margin-left: 20px;
 }

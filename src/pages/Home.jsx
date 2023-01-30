@@ -2,10 +2,9 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='oscurito'>
+    <div className='home'>
       <h1>Bienvenidos al E-Comerce</h1>
-
-      <img src="https://media.tenor.com/5KkGvwWj7QAAAAAC/feliz-de-compras.gif" alt="" />
+      <img src="https://media.tenor.com/am31dRUIjWIAAAAC/de-compras-snoopy.gif" alt="imagen de compras" />
     </div>
   )
 }
