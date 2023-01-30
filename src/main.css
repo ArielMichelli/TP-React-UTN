@@ -104,7 +104,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     font-size: 2.5rem;
     gap: 35px;
 }
@@ -152,7 +151,6 @@ form button {
     background-color: #BBE2F2;
     font-size: 1.3rem;
     margin-top: 10px;
-
 }
 
 form button:hover {

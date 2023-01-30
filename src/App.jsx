@@ -33,7 +33,6 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<h1>pagina de home</h1>} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
