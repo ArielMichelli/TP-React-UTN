@@ -63,3 +63,41 @@ a {
 .vendido{
     background-color: rgba(255, 0, 0, 0.7);
 }
+.oscurito{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:aliceblue;
+    font-size:  2.5rem;
+    gap: 35px;
+}
+.oscurito img{
+    width: 350px;
+    height: 350px;
+}
+
+/* Decoracion FORMULARIOS:*/
+form{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    gap: 25px;
+    background-color: aquamarine;
+    width: 60%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 25px;
+    min-height: 50vh;
+}
+form input{
+    background-color: rgba(0, 0, 0, 0.445);
+    color: white;
+    font-size: 1.5rem;
+}
+form label{
+    margin: 25px 20px;
+    font-size: 1.7rem;
+}
