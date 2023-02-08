@@ -3,6 +3,8 @@ import Productos from './Services/Productos'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
+import Firebase from './Services/Firebase'; 
+
 //Routes:
 import {
   BrowserRouter as Router,
@@ -17,8 +19,9 @@ function App() {
   return (
 
     <div className="App">
+      
       <Router>
-
+    
         <nav className="navbar">
           <div className="navbar__der">
             <Link to="/">Home</Link>

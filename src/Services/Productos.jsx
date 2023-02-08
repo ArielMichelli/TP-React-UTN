@@ -20,14 +20,15 @@ const Productos = () => {
 
     const handleDetalles = (e) => {
         console.log(`Esta viendo los detalles de un producto`)
+        console.log(productos)
 
     };
 
     return (
         <div className="product__container">
-
+            
             {productos.map((prod) => (
-
+           
                 <Producto
                     key={prod.id}
                     title={prod.title}

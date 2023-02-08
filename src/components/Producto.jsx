@@ -14,6 +14,9 @@ function Producto({ title, price, category, thumbnail, comprar, detalles }) {
                 <button onClick={comprar} className='card__btn'>Comprar</button>
                 <button onClick={detalles} className='card__btn'>Detalles</button>
             </div>
+            <div id='detalle'>
+
+            </div>
         </div>
     )
 }
