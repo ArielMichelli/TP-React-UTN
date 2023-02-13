@@ -16,12 +16,13 @@ import {
 
 function App() {
 
+  console.log(Firebase)
+
   return (
 
     <div className="App">
       
       <Router>
-    
         <nav className="navbar">
           <div className="navbar__der">
             <Link to="/">Home</Link>
@@ -31,7 +32,6 @@ function App() {
             <Link to="/login">Login</Link>
             <Link to="/registro">Registro</Link>
           </div>
-
         </nav>
 
         <Routes>
@@ -40,7 +40,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
         </Routes >
-
       </Router >
 
     </div>
