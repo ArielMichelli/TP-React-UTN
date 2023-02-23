@@ -27,7 +27,7 @@ a {
 }
 
 /*  ===== NAVBAR DECORACION: =====*/
-.navbar {
+/* .navbar {
     display: flex;
     margin: 20px 10px;
     justify-content: space-between;
@@ -51,7 +51,7 @@ a {
 
 .navbar li {
     font-size: 1.3rem;
-}
+} */
 
 /* ===== PRODUCTOS ===== */
 .product__card {
