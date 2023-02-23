@@ -7,15 +7,17 @@ import NavBarPro from './components/NavBar';
 
 //Firebase
 import Firebase from './Services/Firebase';
+import app from './Services/Firebase';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Routes:
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 
+
 function App() {
 
-  console.log(Firebase)
+  console.log(app)
 
   return (
 
