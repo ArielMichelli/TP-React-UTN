@@ -1,50 +1,46 @@
 import React, { useState } from 'react'
 
-import Firebase from '../Services/Firebase';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import app from '../Services/Firebase';
-
-
-const auth = getAuth(app);
+import firebase from '../Config/firebase';
 
 
 const Login = () => {
-  const [usuario, setUsuario] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [registro,setRegistro] = useState(false);
+  const [logueado, setlogueado] = useState(false);
 
-  const handleLogin = () => {
-    alert(`Hola señor.... ${usuario}.... como esta?`)
-    console.log(usuario,password)
-  }
-  const handleSubmit = async(e) =>{
+
+  const handleLogin = async (e) => {
     e.preventDefault()
-    const correo = e.target.email.value;
-    const contraseña = e.target.password.value;
-    
-    if(registro){
-      await createUserWithEmailAndPassword(auth,correo,contraseña)
-    }else{
-      await signInWithEmailAndPassword(auth,correo,contraseña)
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, password)
+      setlogueado(true);
+      alert("Usuario Logeado Correctamente");
+    } catch (error) {
+      console.log("Error al loguear, Email/Password invalidos")
     }
   }
+
   return (
-    <div className="contenedor__form">
-      <form onSubmit={handleSubmit}>
-        <h1 className='title__form'>Bienvenido</h1>
+    <>
+      <div className="contenedor__form">
 
-        <input required type="email" name="email" id="email" onChange={ (ev) => setUsuario(ev.target.value)} placeholder='Correo Electronico' />
-        <input required type="password" name="password" id="password" onChange={ (ev) => setPassword(ev.target.value)} placeholder='Contraseña' />
+        <form >
+          <h1 className='title__form'>Bienvenido</h1>
+          <input required type="email" name="email" id="email" onChange={(ev) => setEmail(ev.target.value)} placeholder='Correo Electronico' />
+          <input required type="password" name="password" id="password" onChange={(ev) => setPassword(ev.target.value)} placeholder='Contraseña' />
 
-        <button className='button' type="submit">Ingresar</button>
+          <button className='button' onClick={handleLogin}>Ingresar</button>
 
-        <div className="text__form">
-          <p>¿Perdiste tu contraseña? <a href="#">Recuperar</a></p>
-          <p>¿No tienes Cuenta? <a href="#">Registrarse</a></p>
-        </div>
+          <div className="text__form">
+            <p>¿Perdiste tu contraseña? <a href="#">Recuperar</a></p>
+            <p>¿No tienes Cuenta? <a href="#">Registrarse</a></p>
+          </div>
 
-      </form>
-    </div>
+        </form>
+
+      </div>
+    </>
   )
 }
 

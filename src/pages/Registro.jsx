@@ -1,47 +1,35 @@
 import { useState } from 'react';
-
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import app from '../Services/Firebase';
-
+import firebase from '../Config/firebase';
 
 const Registro = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [registro, setRegistro] = useState(false);
+  const [form, setForm] = useState({ nombre: '', email: '', password: '' })
 
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm({ mode: "onChange" });
-  // const onSubmit = async (data) => {
-  //   console.log(data)
-  //   try {
-  //     const responseUser = Firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
-  //     console.log(responseUser);
-  //   } catch (e) {
-  //     console.log(e)
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    let nombre = form.nombre;
+    let email = form.email;
+    let password = form.password;
 
-  //   }
-  // }
-  const handleSubmit = async (data) => {
-    data.preventDefault()
-    const correo = data.target.email.value;
-    const contraseña = data.target.password.value;
-    console.log("correo", correo);
-    console.log("password", contraseña)
     try {
-      const responseUser = await app.auth().createUserWithEmailAndPassword(correo, password)
-      console.log(responseUser)
-    } catch (e) {
-      console.log(e)
-
+      await firebase.auth().createUserWithEmailAndPassword(email, password)
+      console.log(`Usuario creado correctamente...`)
+      console.log(`Nombre: ${nombre}\nCorreo: ${email}\nPassword: ${password}`)
+    } catch (error) {
+      console.log("Error al crear Usuario")
     }
-    // if(registro){
-    //   await createUserWithEmailAndPassword(auth,correo,contraseña)
-    // }else{
-    //   await signInWithEmailAndPassword(auth,correo,contraseña)
-    // }
+
+  }
+
+  const handleChange = (e) => {
+    const target = e.target;
+    const value = target.value;
+    const name = target.name;
+
+    setForm({
+      ...form,
+      [name]: value
+    })
+
   }
 
   return (
@@ -50,13 +38,14 @@ const Registro = () => {
 
         <h1 className='title__form'>Crea tu cuenta gratis</h1>
 
-        <input type="text" id="usuario" placeholder='Nombre' />
+        <input type="text" name="nombre" id="nombre" value={form.nombre} onChange={handleChange}
+          placeholder='Nombre' />
 
-        <input type="email" id="email"
+        <input type="email" name="email" id="email" value={form.email} onChange={handleChange}
           placeholder='Ingrese tu correo electrónico'
         />
 
-        <input type="password" id="password"
+        <input type="password" name="password" id="password" value={form.password} onChange={handleChange}
           placeholder='Ingrese una contraseña'
         />
 

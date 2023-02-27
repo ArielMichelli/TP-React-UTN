@@ -6,8 +6,7 @@ import Registro from './pages/Registro';
 import NavBarPro from './components/NavBar';
 
 //Firebase
-import Firebase from './Services/Firebase';
-import app from './Services/Firebase';
+import firebase from './Config/firebase';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Routes:
@@ -16,8 +15,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 
 function App() {
-
-  console.log(app)
 
   return (
 
