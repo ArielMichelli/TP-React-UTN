@@ -11,7 +11,8 @@ import firebase from './Config/firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Routes:
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
+//Provider:
+import AuthProvider from './Context/AuthContext';
 
 
 function App() {
@@ -20,10 +21,9 @@ function App() {
 
     <div className="App">
       <>
-
+      <AuthProvider>
         <BrowserRouter>
           <NavBarPro />
-
           <Routes>
             <Route path="/" element={< Home />} />
             <Route path="/productos" element={<Productos />} />
@@ -32,7 +32,9 @@ function App() {
             <Route path='*' element={<Navigate replace to="/" />} />
           </Routes >
         </BrowserRouter>
+        </AuthProvider>
       </>
+
     </div>
 
   )

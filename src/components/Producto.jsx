@@ -4,8 +4,8 @@ import React from 'react'
 function Producto({ title, price, category, thumbnail, comprar, detalles }) {
     return (
         <div className="product__card">
-            <h3>{title}</h3>
-            <p>Precio: ${price}</p>
+            <h3 className='card__titulo' >{title}</h3>
+            <p className='card__precio'>Precio: ${price}</p>
             <p>{category}</p>
             <div className="card__img">
                 <img src={thumbnail} alt="Imagen de producto..." />

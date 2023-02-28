@@ -90,18 +90,30 @@ input {
 .card__img {
     margin-top: 20px;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+}
+.card__precio{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+.card__titulo{
+    text-shadow: 3px 3px 3px black;
+}
+.card__img img {
+    width: 200px;
+    height: 150px;
 }
 
 .card__btn {
     background-color: rgba(0, 0, 0, 0.452);
     padding: 10px;
-    border-radius: 50px;
+    border-radius: 10px;
+    margin-left: 10px;
     border: none;
     color: white;
-    width: 50%;
+    
     transition: .5s;
+    width: fit-content;
 }
 
 .card__btn:hover {

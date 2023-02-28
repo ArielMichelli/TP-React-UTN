@@ -14,8 +14,10 @@ const Registro = () => {
       await firebase.auth().createUserWithEmailAndPassword(email, password)
       console.log(`Usuario creado correctamente...`)
       console.log(`Nombre: ${nombre}\nCorreo: ${email}\nPassword: ${password}`)
+      alert("Cuenta creada con Exito!!!")
     } catch (error) {
       console.log("Error al crear Usuario")
+      alert("Error al crear la cuenta...")
     }
 
   }
@@ -51,6 +53,7 @@ const Registro = () => {
 
         <button className='button' type="submit" >Registrar</button>
       </form>
+
     </div>
   )
 }
