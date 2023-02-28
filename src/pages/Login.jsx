@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import firebase from '../Config/firebase';
 
 
@@ -13,7 +11,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      await firebase.auth().signInWithEmailAndPassword(email, password)
+      await firebase.auth().signInWithEmailAndPassword(email, password) 
       setlogueado(true);
       alert("Usuario Logeado Correctamente");
     } catch (error) {

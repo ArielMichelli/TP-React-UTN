@@ -4,8 +4,8 @@ import React from 'react'
 function Producto({ title, price, category, thumbnail, comprar, detalles }) {
     return (
         <div className="product__card">
-            <h2>{title}</h2>
-            <h3>Precio: ${price}</h3>
+            <h3>{title}</h3>
+            <p>Precio: ${price}</p>
             <p>{category}</p>
             <div className="card__img">
                 <img src={thumbnail} alt="Imagen de producto..." />
@@ -14,7 +14,7 @@ function Producto({ title, price, category, thumbnail, comprar, detalles }) {
                 <button onClick={comprar} className='card__btn'>Comprar</button>
                 <button onClick={detalles} className='card__btn'>Detalles</button>
             </div>
-            <div id='detalle'>
+            <div id='detalle'>  
 
             </div>
         </div>

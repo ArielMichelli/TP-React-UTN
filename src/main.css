@@ -54,6 +54,21 @@ a {
 } */
 
 /* ===== PRODUCTOS ===== */
+.buscador {
+    display: flex;
+    place-content: center;
+    background-color: #3282B5;
+    padding: 10px;
+    color: white;
+}
+
+.buscador label,
+input {
+    font-size: 1.5rem;
+    padding: 5px;
+    box-shadow: 3px 5px 10px black;
+}
+
 .product__card {
     display: flex;
     flex-direction: column;
