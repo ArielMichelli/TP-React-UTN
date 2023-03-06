@@ -18,7 +18,7 @@ function NavBarPro() {
               <Nav.Link as={Link} to="/">Home</Nav.Link>
               <Nav.Link as={Link} to="/productos">Products</Nav.Link>
               <Nav.Link as={Link} to="/registro">Registro</Nav.Link>
-              <Nav.Link as={Link} to="/login">Login</Nav.Link>
+              <Nav.Link as={Link} to="/login">Login</Nav.Link>  
             </Nav>
           </Navbar.Collapse>
         </Container>

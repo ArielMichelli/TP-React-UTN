@@ -1,7 +1,13 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import { Card, Button, Col } from "react-bootstrap";
+import Detalles from './Detalles';
 
 
-function Producto({ title, price, category, thumbnail, comprar, detalles }) {
+function Producto({ id, title, price, category, thumbnail, comprar, detalles }) {
+    const detalles2 = () => {
+        console.log({ id })
+    }
     return (
         <div className="product__card">
             <h3 className='card__titulo' >{title}</h3>
@@ -11,12 +17,10 @@ function Producto({ title, price, category, thumbnail, comprar, detalles }) {
                 <img src={thumbnail} alt="Imagen de producto..." />
             </div>
             <div className="button__container">
-                <button onClick={comprar} className='card__btn'>Comprar</button>
-                <button onClick={detalles} className='card__btn'>Detalles</button>
+                <Button className='m-1' onClick={comprar} variant="info" >Comprar </Button>
+                <Button className='m-1' variant="info" as={Link} to={`/producto/${id}`} >Ver Detalle </Button>
             </div>
-            <div id='detalle'>  
-
-            </div>
+            
         </div>
     )
 }
