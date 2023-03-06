@@ -22,21 +22,23 @@ const Detalles = () => {
         request();
     }, [productoId]);
 
-
+    const handleComprar = () => {
+       console.log(`Usted quiere comprar un... \nPRODUCTO: ${producto.title} \nPRECIO: $ ${producto.price}`)
+    }
     return (
         <>
             <Loading loading={loading} >
                 <Container>
                     <Row className="justify-content-center mt-5">
                         <Card bg='info' style={{ width: '20rem' }} className="text-center">
-                            <Card.Img variant="top" src={producto.thumbnail} />
+                            <Card.Img className='p-2' variant="top" src={producto.thumbnail} />
                             <Card.Body>
                                 <Card.Title>{producto.title}</Card.Title>
                                 <Card.Title>Precio: ${producto.price}</Card.Title>
                                 <Card.Text>Condicion: {producto.condition}</Card.Text>
-                                <Card.Text>Cantidad: {producto.initial_quantity}</Card.Text>
+                                <Card.Text>Stock disponible: {producto.initial_quantity}</Card.Text>
                                 <Card.Text>{producto.warranty}</Card.Text>
-                                <Button variant="warning">Comprar</Button>
+                                <Button variant="warning" onClick={handleComprar}>Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Row>

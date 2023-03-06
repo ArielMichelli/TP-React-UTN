@@ -12,7 +12,7 @@ const Productos = () => {
             fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${buscador}`)
                 .then(res => res.json())
                 .then(data => setProductos(data?.results))
-            setLoading(false)
+                setLoading(false)
         }, [buscador])
 
     // async function getById(id) {
@@ -50,9 +50,7 @@ const Productos = () => {
                 </div>
 
                 <div className="product__container">
-
                     {productos.map((prod) => (
-
                         <Producto
                             key={prod.id}
                             id={prod.id}
@@ -63,7 +61,6 @@ const Productos = () => {
                             comprar={handleComprar}
                             detalles={handleDetalles}
                         />
-
                     ))}
                 </div>
             </Loading>
