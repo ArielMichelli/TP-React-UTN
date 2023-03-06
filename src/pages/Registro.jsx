@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import firebase from '../Config/firebase';
+import { Link } from 'react-router-dom';
 
 const Registro = () => {
   const [form, setForm] = useState({ nombre: '', email: '', password: '' })
@@ -16,7 +17,7 @@ const Registro = () => {
       console.log(`Nombre: ${nombre}\nCorreo: ${email}\nPassword: ${password}`)
       alert("Cuenta creada con Exito!!!")
     } catch (error) {
-      console.log("Error al crear Usuario")
+      console.log(`Error al crear Usuario \n ${error}`)
       alert("Error al crear la cuenta...")
     }
 
@@ -52,6 +53,9 @@ const Registro = () => {
         />
 
         <button className='button' type="submit" >Registrar</button>
+        <div className="text__form">
+            <p>¿Ya tenes Cuenta? <a href="#"><Link as={Link} to="/login">Ingresar</Link></a></p>
+          </div>
       </form>
 
     </div>

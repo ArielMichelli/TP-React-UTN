@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import firebase from '../Config/firebase';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -11,12 +12,16 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      await firebase.auth().signInWithEmailAndPassword(email, password) 
+      await firebase.auth().signInWithEmailAndPassword(email, password)
       setlogueado(true);
+      console.log(`Usuario Logeado Correctamente`);
       alert("Usuario Logeado Correctamente");
     } catch (error) {
-      console.log("Error al loguear, Email/Password invalidos")
+      console.log(`Error al loguear, Email/Password invalidos \n${error}`)
     }
+  }
+  const handleRecuperar = () => {
+    alert("Recuperacion de cuentas proximamente implementada...")
   }
 
   return (
@@ -31,8 +36,8 @@ const Login = () => {
           <button className='button' onClick={handleLogin}>Ingresar</button>
 
           <div className="text__form">
-            <p>¿Perdiste tu contraseña? <a href="#">Recuperar</a></p>
-            <p>¿No tienes Cuenta? <a href="#">Registrarse</a></p>
+            <p>¿Perdiste tu contraseña? <a href="#" onClick={handleRecuperar}>Recuperar</a></p>
+            <p>¿No tienes Cuenta? <a href="#"><Link as={Link} to="/registro">Registrarse</Link></a></p>
           </div>
 
         </form>
