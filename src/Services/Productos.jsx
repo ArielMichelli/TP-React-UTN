@@ -14,25 +14,9 @@ const Productos = () => {
     setLoading(false);
   }, [buscador]);
 
-  // async function getById(id) {
-  //     return fetch(`https://api.mercadolibre.com/items/${id}`)
-  //         .then((res) => res.json())
-  // }
-  // function getDescription(id) {
-  //     return fetch(`https://api.mercadolibre.com/items/${id}/description`)
-  //         .then((res) => res.json())
-  // }
-
   const handleComprar = (e) => {
-    console.log("Producto vendido");
-    console.dir(e.target);
     e.target.classList.add("vendido");
-    e.target.innerHTML = "Producto Vendido";
-  };
-
-  const handleDetalles = (e) => {
-    console.log(`Esta viendo los detalles de un producto`);
-    console.log(productos);
+    e.target.innerHTML = "Producto añadido al carro";
   };
 
   const handleBuscar = (e) => {
@@ -54,10 +38,9 @@ const Productos = () => {
               id={prod.id}
               title={prod.title}
               price={prod.price}
-              category={prod.category}
+              catalog_id={prod.catalog_product_id}
               thumbnail={prod.thumbnail}
               comprar={handleComprar}
-              detalles={handleDetalles}
             />
           ))}
         </div>

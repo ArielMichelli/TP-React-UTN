@@ -54,6 +54,7 @@ const Registro = () => {
             value={form.nombre}
             onChange={handleChange}
             placeholder="Nombre"
+            required
           />
           <input
             type="text"
@@ -62,6 +63,7 @@ const Registro = () => {
             value={form.apellido}
             onChange={handleChange}
             placeholder="Apellido"
+            required
           />
         </div>
 
@@ -72,6 +74,7 @@ const Registro = () => {
           value={form.email}
           onChange={handleChange}
           placeholder="Ingrese tu correo electrónico"
+          required
         />
 
         <input
@@ -81,6 +84,8 @@ const Registro = () => {
           value={form.password}
           onChange={handleChange}
           placeholder="Ingrese una contraseña"
+          required
+          minLength={6}
         />
 
         <button className="button" type="submit">
@@ -89,7 +94,7 @@ const Registro = () => {
 
         <div className="text__form">
           <p>
-            ¿Ya tenes Cuenta?
+            ¿Ya tenes Cuenta?{" "}
             <Link as={Link} to="/login">
               Ingresar
             </Link>

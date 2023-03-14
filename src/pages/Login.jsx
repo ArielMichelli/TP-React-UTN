@@ -15,6 +15,7 @@ const Login = () => {
       console.log(`Usuario Logeado Correctamente`);
       alert("Usuario Logeado Correctamente");
     } catch (error) {
+      alert(`Error al loguear, Email/Password invalidos`);
       console.log(`Error al loguear, Email/Password invalidos \n${error}`);
     }
   };

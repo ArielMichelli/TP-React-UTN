@@ -32,15 +32,25 @@ const Detalles = () => {
       <Loading loading={loading}>
         <Container>
           <Row className="justify-content-center mt-5">
-            <Card bg="info" style={{ width: "20rem" }} className="text-center">
+            <Card
+              bg="primary"
+              style={{
+                width: "20rem",
+                border: "solid black 1px",
+                boxShadow: "2px 2px 10px black",
+              }}
+              className="text-center text-white"
+            >
               <Card.Img
-                className="p-2"
+                className="p-1"
                 variant="top"
                 src={producto.thumbnail}
               />
               <Card.Body>
-                <Card.Title>{producto.title}</Card.Title>
-                <Card.Title>Precio: ${producto.price}</Card.Title>
+                <Card.Title className="my-4">{producto.title}</Card.Title>
+                <Card.Title className="my-4">
+                  Precio:$  {producto.price}
+                </Card.Title>
                 <Card.Text>Condicion: {producto.condition}</Card.Text>
                 <Card.Text>
                   Stock disponible: {producto.initial_quantity}
