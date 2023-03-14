@@ -1,226 +1,206 @@
 /*Fuente de texto:*/
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-family: 'Acme', sans-serif;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "Acme", sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .product__container {
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .titulo {
-    text-align: center;
-    background-color: rgba(165, 42, 42, 0.562);
-    margin: 20px auto;
+  text-align: center;
+  background-color: rgba(165, 42, 42, 0.562);
+  margin: 20px auto;
 }
 
-/*  ===== NAVBAR DECORACION: =====*/
-/* .navbar {
-    display: flex;
-    margin: 20px 10px;
-    justify-content: space-between;
-    border-radius: 40px;
-    padding: 15px;
-    background-color: #3282B5;
-    box-shadow: 2px 5px 10px black;
-    font-size: 1.4rem;
-}
-
-.navbar a {
-    color: white;
-}
-
-.navbar__izq,
-.navbar__der {
-    display: flex;
-    justify-content: space-around;
-    width: 200px;
-}
-
-.navbar li {
-    font-size: 1.3rem;
-} */
 
 /* ===== PRODUCTOS ===== */
 .buscador {
-    display: flex;
-    place-content: center;
-    background-color: #3282B5;
-    padding: 10px;
-    color: white;
+  display: flex;
+  place-content: center;
+  background-color: #3282b5;
+  padding: 10px;
+  color: white;
 }
 
 .buscador label,
 input {
-    font-size: 1.5rem;
-    padding: 5px;
-    box-shadow: 3px 5px 10px black;
+  font-size: 1.5rem;
+  padding: 5px;
+  box-shadow: 3px 5px 10px black;
 }
 
 .product__card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #3282B5;
-    width: 300px;
-    border-radius: 20px 50px;
-    padding: 15px;
-    box-shadow: 3px 1px 3px black;
-    transition: .5s;
-    font-size: 1.2rem;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3282b5;
+  width: 300px;
+  border-radius: 20px 50px;
+  padding: 15px;
+  box-shadow: 3px 1px 3px black;
+  transition: 0.5s;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .product__card:hover {
-    transform: perspective(500px) translateZ(30px) translateX(20px) translateY(-20px);
+  transform: perspective(500px) translateZ(30px) translateX(20px)
+    translateY(-20px);
 }
 
 .card__img {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.card__precio{
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 10px;
+.card__precio {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
 }
-.card__titulo{
-    text-shadow: 3px 3px 3px black;
+.card__titulo {
+  text-shadow: 3px 3px 3px black;
 }
 .card__img img {
-    width: 220px;
-    height: 150px;
+  width: 220px;
+  height: 150px;
 }
 
 .card__btn {
-    background-color: rgba(0, 0, 0, 0.452);
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 10px;
-    border: none;
-    color: white;
-    
-    transition: .5s;
-    width: fit-content;
+  background-color: rgba(0, 0, 0, 0.452);
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  border: none;
+  color: white;
+
+  transition: 0.5s;
+  width: fit-content;
 }
 
 .card__btn:hover {
-    color: white;
+  color: white;
 }
 
 .vendido {
-    background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(255, 0, 0, 0.7);
 }
 
 .home {
-    background-color: #BBE2F2;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    gap: 35px;
+  background-color: #bbe2f2;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  gap: 35px;
 }
 
 .home img {
-    width: 400px;
-    height: 350px;
+  width: 400px;
+  height: 350px;
 }
 
-/* ===== FORMULARIOS Decoracion ===== */
+/* ===== FORMULARIOS Decoracion Registro - Login ===== */
 .contenedor__form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0E4C75;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e4c75;
+  height: 100vh;
 }
 
 form {
-    height: 350px;
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-    gap: 25px;
-    background-color: #3282B5;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 10px;
-    min-height: 50vh;
-    box-shadow: 5px 5px 10px black;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  gap: 25px;
+  background-color: #3282b5;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 10px;
+  min-height: 50vh;
+  box-shadow: 5px 5px 10px black;
 }
 
 form input {
-    padding: 10px;
-    font-size: 1.5rem;
+  padding: 10px;
+  font-size: 1.5rem;
 }
 
 form button {
-    width: 200px;
-    padding: 10px;
-    border-radius: 20px;
-    align-self: center;
-    border: none;
-    background-color: #BBE2F2;
-    font-size: 1.3rem;
-    margin-top: 10px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 20px;
+  align-self: center;
+  border: none;
+  background-color: #bbe2f2;
+  font-size: 1.3rem;
+  margin-top: 10px;
 }
 
 form button:hover {
-    background-color: #0E4C75;
+  background-color: #0e4c75;
 }
 
 .title__form {
-    color: #BBE2F2;
-    text-align: center;
-    text-transform: uppercase;
+  color: #bbe2f2;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .text__form {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    text-align: center;
-    color: white;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
 }
 
 .text__form a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: underline;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
 .row__form {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 #formRegistro {
-    width: fit-content;
-    height: auto;
-    background-color: #3282B5;
+  width: fit-content;
+  height: auto;
+  background-color: #3282b5;
 }
 
 #formRegistro label {
-    font-size: 1.5rem;
-    color: white;
+  font-size: 1.5rem;
+  color: white;
 }
 
 #formRegistro input {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+
+.nombre_apellido{
+  display: flex;
+  max-width: 100%;
+  gap: 10px;
 }

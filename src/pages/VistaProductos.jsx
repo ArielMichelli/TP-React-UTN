@@ -1,10 +1,8 @@
-import React from 'react'
-import Productos from '../Services/Productos'
+import React from "react";
+import Productos from "../Services/Productos";
 
 const VistaProductos = () => {
-  return (
-    <Productos />
-  )
-}
+  return <Productos />;
+};
 
-export default VistaProductos
+export default VistaProductos;
